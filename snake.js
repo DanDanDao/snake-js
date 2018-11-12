@@ -22,6 +22,17 @@ function Snake() {
     }
   }
 
+  this.death = function() {
+    for (var i = 0; i < this.tail.length; i++) {
+      var pos = this.tail[i];
+      var d = dist(this.x, this.y, pos.x, pos.y);
+      if (d < 1) {
+        this.total = 0;
+        this.tail = [];
+      }
+    }
+  }
+
   this.update = function() {
     if (this.total === this.tail.length) {
       for(var i = 0; i < this.tail.length - 1; i++) {
