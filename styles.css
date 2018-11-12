@@ -1,8 +1,27 @@
+:root {
+    --snake-green: #0EAD69;
+    --snake-pink: #EE4266;
+}
+
 body {
   margin:0;
   padding:0;
   overflow: hidden;
 }
+
 canvas {
   margin:auto;
+}
+
+.game-title {
+  color: var(--snake-green);
+}
+
+#defaultCanvas0 {
+  border: 5px solid var(--snake-green);
+  border-radius: 10px;
+}
+
+#score {
+  display: inline;
 }

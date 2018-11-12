@@ -15,6 +15,7 @@ function Snake() {
     var d = dist(this.x, this.y, pos.x, pos.y);
     if (d < 1) {
       this.total++;
+      document.getElementById('score').innerHTML = this.total*1000;
       console.log("Length : " + this.total);
       return true;
     } else {
@@ -29,7 +30,8 @@ function Snake() {
       if (d < 1) {
         this.total = 0;
         this.tail = [];
-        alert("Game over sucker!!!");
+        document.getElementById('score').innerHTML = "0";
+        alert("Game over!!!");
       }
     }
   }
@@ -50,12 +52,12 @@ function Snake() {
   }
 
   this.show = function() {
-    fill(255);
+    fill(168, 225, 200);
     for(var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }
 
-    fill(23, 132, 12);
+    fill(14, 173, 105);
     rect(this.x, this.y, scl, scl);
   }
 }
