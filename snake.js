@@ -3,7 +3,7 @@ function Snake() {
   this.y = 0;
   this.xspeed = 1;
   this.yspeed = 0;
-  this.total = 1;
+  this.total = 0;
   this.tail = [];
 
   this.dir = function(x, y) {
@@ -50,7 +50,7 @@ function Snake() {
 
   this.show = function() {
     fill(255);
-    for(var i = 1; i < this.total; i++) {
+    for(var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }
 
