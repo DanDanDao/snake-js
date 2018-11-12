@@ -15,6 +15,7 @@ canvas {
 
 .game-title {
   color: var(--snake-green);
+  font-family: "8Bit", Verdana, Tahoma;
 }
 
 #defaultCanvas0 {
@@ -22,6 +23,15 @@ canvas {
   border-radius: 10px;
 }
 
+.score-board {
+  font-family: "8Bit", Verdana, Tahoma;
+}
+
 #score {
   display: inline;
+}
+
+@font-face {
+    font-family: "8Bit";
+    src: url(fonts/8Bit.ttf) format("truetype");
 }
