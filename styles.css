@@ -35,3 +35,20 @@ canvas {
     font-family: "8Bit";
     src: url(fonts/8Bit.ttf) format("truetype");
 }
+
+.modal {
+  background: white;
+}
+
+.modal-content {
+  border: none;
+}
+
+#start-btn {
+  background: var(--snake-green);
+  border: none;
+}
+
+#start-btn:hover {
+  filter: brightness(85%);
+}
