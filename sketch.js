@@ -16,7 +16,8 @@ $('#start-btn').on('click',function (){
 })	
 
 function setup() {
-	createCanvas(600, 600);
+	myCanvas = createCanvas(600, 600);
+	myCanvas.parent("canvas");
 	s = new Snake();
 	frameRate(10);
 	pickLocation();
