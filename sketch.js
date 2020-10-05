@@ -3,11 +3,25 @@ var scl = 20;
 
 var food;
 
+$(window).on('load',function(){
+	$('#start-modal').modal('show');
+});
+
+$('#start-btn').on('click',function (){
+	s = new Snake();
+	frameRate(10);
+	pickLocation();
+	s.dir(1, 0);
+	s.curdirect = "right"
+})	
+
 function setup() {
 	createCanvas(600, 600);
 	s = new Snake();
 	frameRate(10);
 	pickLocation();
+	s.dir(0, 0);
+	s.curdirect = "right"
 }
 
 function pickLocation() {
