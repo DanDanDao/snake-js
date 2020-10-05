@@ -5,10 +5,12 @@ function Snake() {
   this.yspeed = 0;
   this.total = 1;
   this.tail = [];
+  this.curdirect = "right"
 
-  this.dir = function(x, y) {
+  this.dir = function(x, y, curdirect) {
     this.xspeed = x;
     this.yspeed = y;
+    this.curdirect = curdirect
   }
 
   this.eat = function(pos) {

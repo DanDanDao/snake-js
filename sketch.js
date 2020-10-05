@@ -32,13 +32,17 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
+	if (keyCode === UP_ARROW && s.curdirect != "down") {
 		s.dir(0, -1);
-	} else if (keyCode === DOWN_ARROW) {
+		s.curdirect = "up"
+	} else if (keyCode === DOWN_ARROW && s.curdirect != "up") {
 		s.dir(0, 1);
-	} else if (keyCode === RIGHT_ARROW) {
+		s.curdirect = "down"
+	} else if (keyCode === RIGHT_ARROW && s.curdirect != "left") {
 		s.dir(1, 0);
-	} else if (keyCode === LEFT_ARROW) {
+		s.curdirect = "right"
+	} else if (keyCode === LEFT_ARROW && s.curdirect != "right") {
 		s.dir(-1, 0);
+		s.curdirect = "left"
 	}
 }
